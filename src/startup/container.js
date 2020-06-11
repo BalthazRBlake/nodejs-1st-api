@@ -6,6 +6,9 @@ const { HomeService } = require("../service");
 // controller
 const { HomeController } = require("../controller");
 
+// routes
+const { HomeRoutes } = require("../routes/index.routes")
+
 const container = createContainer();
 
 container
@@ -14,6 +17,9 @@ container
   })
   .register({
     HomeController: asClass(HomeController.bind(HomeController)).singleton()
+  })
+  .register({
+    HomeRoutes: asFunction(HomeRoutes).singleton()
   });
 
 module.exports = container;
