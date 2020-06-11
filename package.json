@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-1st-api",
+  "version": "1.0.0",
+  "description": "\"1st Node.js API\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BalthazRBlake/nodejs-1st-api.git"
+  },
+  "keywords": [
+    "Node.js",
+    "API"
+  ],
+  "author": "FHHF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BalthazRBlake/nodejs-1st-api/issues"
+  },
+  "homepage": "https://github.com/BalthazRBlake/nodejs-1st-api#readme"
+}
