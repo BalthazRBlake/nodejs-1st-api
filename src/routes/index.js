@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const compression = require("compression");
-const { json } = require("express");
 require("express-async-errors");
 
 module.exports = function({ HomeRoutes }){
@@ -10,7 +9,8 @@ module.exports = function({ HomeRoutes }){
   const apiRoutes = express.Router();
 
   apiRoutes
-    .use(express,json())
+    .use(express.json())
+    .use(express.static(__dirname + "/../public"))
     .use(cors())
     .use(helmet())
     .use(compression());

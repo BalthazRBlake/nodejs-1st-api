@@ -6,7 +6,7 @@ let _config = null;
 class Server {
   constructor({ config, router }) {
     _config = config;
-    _express = router;
+    _express = express().use(router);
   }
 
   start() {
