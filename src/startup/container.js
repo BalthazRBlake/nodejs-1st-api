@@ -23,7 +23,13 @@ const
 } = require("../controller");
 
 // routes
-const { HomeRoutes } = require("../routes/index.routes");
+const 
+{ 
+  HomeRoutes,
+  UserRoutes,
+  IdeaRoutes,
+  CommentRoutes
+} = require("../routes/index.routes");
 const Routes = require("../routes");
 
 // model
@@ -56,6 +62,9 @@ container
     CommentController: asClass(CommentController.bind(CommentController)).singleton(),
 
     HomeRoutes: asFunction(HomeRoutes).singleton(),
+    UserRoutes: asFunction(UserRoutes).singleton(),
+    IdeaRoutes: asFunction(IdeaRoutes).singleton(),
+    CommentRoutes: asFunction(CommentRoutes).singleton(),
 
     User: asValue(User),
     Idea: asValue(Idea),
