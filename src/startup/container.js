@@ -18,7 +18,10 @@ const Routes = require("../routes");
 const { User, Idea, Comment } = require("../model");
 
 // repository
-const { UserRepository, IdeaRepository, CommentRepository } = require("../repository");
+const { 
+  UserRepository, 
+  IdeaRepository, 
+  CommentRepository } = require("../repository");
 
 const container = createContainer();
 

@@ -1,4 +1,3 @@
-const BaseEntity = require("./base.repository");
 const BaseRepository = require("./base.repository");
 let _user = null;
 
