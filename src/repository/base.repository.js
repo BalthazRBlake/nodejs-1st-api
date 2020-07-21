@@ -11,7 +11,7 @@ class BaseRepository {
     const skips = pageSize * (pageNum - 1);
     return await this.model
       .find()
-      .skips(skips)
+      .skip(skips)
       .limit(pageSize);
   }
 
