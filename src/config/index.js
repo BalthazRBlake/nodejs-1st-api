@@ -1,5 +1,7 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
+/* eslint-disable global-require */
+if (process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line import/no-extraneous-dependencies
+  require('dotenv').config();
 }
 
 module.exports = {
@@ -7,5 +9,5 @@ module.exports = {
   MONGO_URI: process.env.MONGO_URI,
   APPLICATION_NAME: process.env.APPLICATION_NAME,
   JWT_SECRET: process.env.JWT_SECRET,
-  CACHE_KEY: process.env.CACHE_KEY
-}
+  CACHE_KEY: process.env.CACHE_KEY,
+};
