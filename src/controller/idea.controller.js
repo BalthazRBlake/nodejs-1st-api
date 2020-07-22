@@ -1,5 +1,4 @@
-const { response } = require("express");
-
+// const { response } = require('express');
 let _ideaService = null;
 
 class IdeaController {
@@ -14,8 +13,8 @@ class IdeaController {
   }
 
   async getAll(request, response) {
-    const{ pageSize, pageNum } = request.query;
-    const ideas = await _ideaService.getAll( pageSize, pageNum );
+    const { pageSize, pageNum } = request.query;
+    const ideas = await _ideaService.getAll(pageSize, pageNum);
     return response.send(ideas);
   }
 
@@ -35,7 +34,7 @@ class IdeaController {
   async delete(request, response) {
     const { ideaId } = request.params;
     const deletedIdea = await _ideaService.delete(ideaId);
-    return deletedIdea;
+    return response.send(deletedIdea);
   }
 
   async getUserIdeas(request, response) {
