@@ -1,8 +1,12 @@
-const { request } = require("express");
+// const { request } = require('express');
+const NotFoundMiddleware = require('./not-found.middleware');
+const ErrorMiddleware = require('./error.middleware');
+const AuthMiddleware = require('./auth.middleware');
+const ParseIntMiddleware = require('./parse-int.middleware');
 
 module.exports = {
-  NotFoundMiddleware: require("./not-found.middleware"),
-  ErrorMiddleware: require("./error.middleware"),
-  AuthMiddleware: require("./auth.middleware"),
-  ParseIntMiddleware: require("./parse-int.middleware")
-}
+  NotFoundMiddleware,
+  ErrorMiddleware,
+  AuthMiddleware,
+  ParseIntMiddleware,
+};
