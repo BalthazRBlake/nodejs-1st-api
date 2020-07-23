@@ -3,11 +3,11 @@ class BaseService {
     this.repository = repository;
   }
 
-  async get(id) {    
+  async get(id) {
     if (!id) {
       const error = new Error();
       error.status = 400;
-      error.message = "id must be sent";
+      error.message = 'id must be sent';
       throw error;
     }
 
@@ -16,7 +16,7 @@ class BaseService {
     if (!currentEntity) {
       const error = new Error();
       error.status = 404;
-      error.message = "not found entity";
+      error.message = 'not found entity';
       throw error;
     }
 
@@ -24,33 +24,33 @@ class BaseService {
   }
 
   async getAll(pageSize, pageNum) {
-    return await this.repository.getAll(pageSize, pageNum);
+    return this.repository.getAll(pageSize, pageNum);
   }
 
   async create(entity) {
-    return await this.repository.create(entity);
+    return this.repository.create(entity);
   }
 
   async update(id, entity) {
     if (!id) {
       const error = new Error();
       error.status = 400;
-      error.message = "id must be sent";
+      error.message = 'id must be sent';
       throw error;
     }
 
-    return await this.repository.update(id, entity);
+    return this.repository.update(id, entity);
   }
 
   async delete(id) {
     if (!id) {
       const error = new Error();
       error.status = 400;
-      error.message = "id must be sent";
+      error.message = 'id must be sent';
       throw error;
     }
 
-    return await this.repository.delete(id);
+    return this.repository.delete(id);
   }
 }
 

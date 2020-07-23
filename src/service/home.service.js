@@ -1,7 +1,7 @@
 class HomeService {
   index() {
     return {
-      message: "Hello Node.js API!"
+      message: 'Hello Node.js API!',
     };
   }
 }

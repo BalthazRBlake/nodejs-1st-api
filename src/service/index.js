@@ -1,7 +1,13 @@
+const HomeService = require('./home.service');
+const UserService = require('./user.service');
+const IdeaService = require('./idea.service');
+const CommentService = require('./comment.service');
+const AuthService = require('./auth.service');
+
 module.exports = {
-  HomeService: require("./home.service"),
-  UserService: require("./user.service"),
-  IdeaService: require("./idea.service"),
-  CommentService: require("./comment.service"),
-  AuthService: require("./auth.service")
-}
+  HomeService,
+  UserService,
+  IdeaService,
+  CommentService,
+  AuthService,
+};
