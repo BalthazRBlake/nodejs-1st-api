@@ -45,7 +45,7 @@ UserSchema.pre('save', async function (next) {
   const hashedPassword = hashSync(user.password, salt);
   user.password = hashedPassword;
 
-  next();
+  return next();
 });
 
 module.exports = mongoose.model('user', UserSchema);
