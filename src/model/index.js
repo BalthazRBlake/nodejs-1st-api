@@ -1,5 +1,9 @@
+const User = require('./user.model');
+const Idea = require('./idea.model');
+const Comment = require('./comment.model');
+
 module.exports = {
-  User: require("./user.model"),
-  Idea: require("./idea.model"),
-  Comment: require("./comment.model")
-}
+  User,
+  Idea,
+  Comment,
+};

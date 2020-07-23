@@ -1,26 +1,28 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+
 const { Schema } = mongoose;
 
 const IdeaSchema = new Schema({
   idea: { type: String, required: true },
   description: { type: String },
-  upVotes: [{type: Boolean}],
-  downVotes: [{type: Boolean}],
-  author: { 
+  upVotes: [{ type: Boolean }],
+  downVotes: [{ type: Boolean }],
+  author: {
     type: Schema.Types.ObjectId,
-    ref: "user",
+    ref: 'user',
     required: true,
-    autopopulate: true
+    autopopulate: true,
   },
   comments: [
-    { 
+    {
       type: Schema.Types.ObjectId,
-      ref: "comment",
+      ref: 'comment',
       required: true,
-      autopopulate: true
-    }
-  ]
+      autopopulate: true,
+    },
+  ],
 });
 
-IdeaSchema.plugin(require("mongoose-autopopulate"));
-module.exports = mongoose.model("idea", IdeaSchema);
+IdeaSchema.plugin(require('mongoose-autopopulate'));
+
+module.exports = mongoose.model('idea', IdeaSchema);
