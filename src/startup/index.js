@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require('express');
 
 let _express = null;
 let _config = null;
@@ -10,13 +10,14 @@ class Server {
   }
 
   start() {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       _express.listen(_config.PORT, () => {
-        
-        console.log(`${_config.APPLICATION_NAME} API running on PORT ${_config.PORT}`);
+        console.log(
+          `${_config.APPLICATION_NAME} API running on PORT ${_config.PORT}`,
+        );
 
         resolve();
-      })
+      });
     });
   }
 }
