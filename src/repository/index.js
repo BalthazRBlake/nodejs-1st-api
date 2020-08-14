@@ -1,5 +1,9 @@
+const UserRepository = require('./user.repository');
+const IdeaRepository = require('./idea.repository');
+const CommentRepository = require('./comment.repository');
+
 module.exports = {
-  UserRepository: require("./user.repository"),
-  IdeaRepository: require("./idea.repository"),
-  CommentRepository: require("./comment.repository")
-}
+  UserRepository,
+  IdeaRepository,
+  CommentRepository,
+};

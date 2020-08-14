@@ -1,4 +1,5 @@
-const BaseService = require("./base.service");
+const BaseService = require('./base.service');
+
 let _userRepository = null;
 
 class UserService extends BaseService {
@@ -8,7 +9,7 @@ class UserService extends BaseService {
   }
 
   async getUserByUserName(username) {
-    return await _userRepository.getUserByUserName(username);
+    return _userRepository.getUserByUserName(username);
   }
 }
 

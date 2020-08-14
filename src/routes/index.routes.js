@@ -1,7 +1,13 @@
+const HomeRoutes = require('./home.routes');
+const UserRoutes = require('./user.routes');
+const IdeaRoutes = require('./idea.routes');
+const CommentRoutes = require('./comment.routes');
+const AuthRoutes = require('./auth.routes');
+
 module.exports = {
-  HomeRoutes: require("./home.routes"),
-  UserRoutes: require("./user.routes"),
-  IdeaRoutes: require("./idea.routes"),
-  CommentRoutes: require("./comment.routes"),
-  AuthRoutes: require("./auth.routes")
-}
+  HomeRoutes,
+  UserRoutes,
+  IdeaRoutes,
+  CommentRoutes,
+  AuthRoutes,
+};

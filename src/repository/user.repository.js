@@ -1,4 +1,5 @@
-const BaseRepository = require("./base.repository");
+const BaseRepository = require('./base.repository');
+
 let _user = null;
 
 class UserRepository extends BaseRepository {
@@ -8,6 +9,7 @@ class UserRepository extends BaseRepository {
   }
 
   async getUserByUserName(username) {
+    // eslint-disable-next-line no-return-await
     return await _user.findOne({ username });
   }
 }

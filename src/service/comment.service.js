@@ -1,4 +1,5 @@
-const BaseService = require("./base.service");
+const BaseService = require('./base.service');
+
 let _commentRepository = null;
 let _ideaRepository = null;
 
@@ -12,8 +13,8 @@ class CommentService extends BaseService {
   async getIdeaComments(ideaId) {
     if (!ideaId) {
       const error = new Error();
-      error.status = 400,
-      error.message = "ideaId must be provided";
+      error.status = 400;
+      error.message = 'ideaId must be provided';
       throw error;
     }
 
@@ -21,8 +22,8 @@ class CommentService extends BaseService {
 
     if (!idea) {
       const error = new Error();
-      error.status = 404,
-      error.message = "idea not found";
+      error.status = 404;
+      error.message = 'idea not found';
       throw error;
     }
 
@@ -30,11 +31,11 @@ class CommentService extends BaseService {
     return comments;
   }
 
-  async createComment(comment, ideaId){
+  async createComment(comment, ideaId) {
     if (!ideaId) {
       const error = new Error();
-      error.status = 400,
-      error.message = "ideaId must be provided";
+      error.status = 400;
+      error.message = 'ideaId must be provided';
       throw error;
     }
 
@@ -42,15 +43,15 @@ class CommentService extends BaseService {
 
     if (!idea) {
       const error = new Error();
-      error.status = 404,
-      error.message = "idea not found";
+      error.status = 404;
+      error.message = 'idea not found';
       throw error;
     }
-    
+
     const createdComment = await _commentRepository.create(comment);
     idea.comments.push(createdComment);
 
-    return await _ideaRepository.update(ideaId, { comments: idea.comments });
+    return _ideaRepository.update(ideaId, { comments: idea.comments });
   }
 }
 

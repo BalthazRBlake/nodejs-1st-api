@@ -1,4 +1,5 @@
-const BaseRepository = require("./base.repository");
+const BaseRepository = require('./base.repository');
+
 let _idea = null;
 
 class IdeaRepository extends BaseRepository {
@@ -8,6 +9,7 @@ class IdeaRepository extends BaseRepository {
   }
 
   async getUserIdeas(author) {
+    // eslint-disable-next-line no-return-await
     return await _idea.find({ author });
   }
 }
