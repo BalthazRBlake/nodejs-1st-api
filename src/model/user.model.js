@@ -15,7 +15,7 @@ const UserSchema = new Schema(
       createdAt: true,
       updatedAt: true,
     },
-  }
+  },
 );
 
 // this refers to current Mongo Document
